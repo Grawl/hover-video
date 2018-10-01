@@ -1,0 +1,78 @@
+.wrapper {
+    font-size: 16px;
+    font-family: sans-serif;
+}
+html:root:root:root [hidden] {
+    display: none;
+}
+html:root:root:root [invisible] {
+    opacity: 0;
+}
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.9);
+    z-index: 2;
+    color: hsl(0, 0%, 14%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+}
+.backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+    object-position: center;
+}
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20em;
+    height: auto;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    margin-left: -20em;
+    padding: 0.5em;
+    color: black;
+    background: hsla(0, 0%, 100%, 0.9);
+}
+.text p {
+    margin: 0;
+}
+.button {
+    width: 2em;
+    height: 2em;
+    background: white;
+    color: red;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    right: 2em;
+    margin-top: -1em;
+    z-index: 3;
+    border-radius: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+    text-decoration: none;
+    font-family: sans-serif;
+    line-height: 1;
+}
+.button:hover {
+    opacity: 0.8;
+}
+.button.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
