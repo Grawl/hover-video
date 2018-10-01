@@ -10,9 +10,11 @@ function init() {
     const data = window['hover-video']
     data.counter = 0
     data.videoEl = document.querySelector('[hover-play-video]')
+    data.loaderEl = document.querySelector('[loader]')
     data.videoEl.play()
         .then(() => {
             data.timeout = updateTimeout(1000)
+            data.loaderEl.hidden = true
         })
         .catch(error => {
             console.error({ error })
